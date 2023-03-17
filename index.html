@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nike Website</title>
+
+    <link rel="stylesheet" href="style.css">
+    
+</head>
+<body>
+    
+    <section class="container">
+        <header>
+            <div class="logo">
+                <img src="images/nikelogo.png" alt="">
+            </div>
+            <ul class="nav justify-content-center" id="nav" >
+                <button id="close" onclick="closeMenu()">
+                    <ion-icon name="close"></ion-icon>
+                </button>
+                <li class="nav-item">
+                    <a class="nav-link" href="#hero">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Shop</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">About</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Contact</a>
+                </li>
+            </ul>   
+            <button id="cart"><ion-icon name="cart"></ion-icon></button>
+            <button id="open" onclick="openMenu()">
+                <ion-icon name="menu"></ion-icon>
+            </button>
+        </header>
+        <section class="hero">
+            <div class="details">
+                <div class="heading">
+                    NIKE <span> BLAZER MID</span>
+                </div>
+                <p>A large Max Air Unit Int Heel and <b>ZOOM AIR</b>  <br>Technology Under The ForeFoot </p>
+                <strong>$260</strong>
+                <button id="btn">GET IT NOW</button>
+            </div>
+            <div class="img-cont">
+                <img src="images/shoe1.png" id="shoes">
+            </div>
+            <ul class="social-media">
+                <li><a href="#"><ion-icon name="logo-facebook"></ion-icon></a></li>
+                <li><a href="#"><ion-icon name="logo-instagram"></ion-icon></a></li>
+                <li><a href="#"><ion-icon name="logo-twitter"></ion-icon></a></li>
+            </ul>
+            <ul class="shoes">
+                <li><img  src="images/shoe1.png" onclick="imgSlider('images/shoe1.png')"></li>
+                <li><img src="images/shoe2.png" onclick="imgSlider('images/shoe2.png')"></li>
+                <li><img src="images/shoe3.png" onclick="imgSlider('images/shoe3.png')"></li>
+            </ul>
+        </section>
+    </section>
+
+
+    <script src="main.js"></script>
+
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+</body>
+</html>

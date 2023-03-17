@@ -1,0 +1,425 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    display: flex;
+    height:  auto;
+    width: 100%;
+    overflow: hidden;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.container{
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    background: #191919;
+    width: 100%;
+    height: auto;
+}
+.container::before{
+    display: flex;
+    content: ' ';
+    top: -300px; left: -200px;
+    position: absolute;
+    width: 600px;
+    height: 600px;
+    border-radius: 50%;
+    background: #4bc9ff;
+}
+.container::after{
+    display: flex;
+    bottom: -300px; right: -200px;
+    content: ' ';
+    position: absolute;
+    width: 800px;
+    height: 800px;
+    border-radius: 50%;
+    background: #f8ff2c;
+}
+header{
+    display: flex;
+    position: fixed;
+    width: 100%;
+    height: 80px;
+    padding: 10px 0px;
+    z-index: 1000;
+    background: rgba(255, 255, 255, 0.08);
+    backdrop-filter: blur(10px);
+    align-items: center;
+    justify-content: space-around;
+}
+header .logo{
+    display: flex;
+    width: auto;
+    height: 95%;
+}
+header .logo img{
+    display: block;
+    height: 100%;
+    width: 100%;
+}
+header .nav{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+header .nav #close{
+    display: none;
+}
+
+header .nav .nav-item{
+    display: flex;
+    margin: 0px 10px;
+    list-style: none;
+}
+header .nav .nav-item a{
+    display: flex;
+    padding: 10px 20px;
+    outline: none;
+    color: #FFF;
+    font-size: 20px;
+    text-decoration: none;
+    transition: 0.5s;
+}
+header .nav .nav-item:hover a{
+    background: #FFF;
+    color: #191919;
+    border-radius: 6px;
+}
+
+header #cart{
+    display: flex;
+    padding: 10px;
+    border-radius: 6px;
+    border: none;
+    outline: none;
+    align-items: center;
+    justify-content: center;
+    background: transparent;
+    transition: 0.5s;
+}
+header #cart:hover{
+    background-color: #FFF;
+}
+header #cart ion-icon{
+    font-size: 20px;
+    font-weight: bold;
+    color: #FFF;
+}
+header #cart:hover ion-icon{
+    color: #191919;
+}
+header #open{
+    display: none;
+}
+
+.hero{
+    display: flex;
+    position: relative;
+    z-index: 100;
+    height: 100vh;
+    width: 100%;
+    padding: 80px 100px;
+    background: rgba(255, 255, 255, 0.08);
+    backdrop-filter: blur(10px);
+    align-items: center;
+    justify-content: left;
+}
+.hero::before{
+    display: flex;
+    position: absolute;
+    content: ' ';
+    width: 100%; 
+    height: 100%;
+    opacity: 0.2;
+    background-image: url(images/nike.png);
+    background-size: 60% 40%;
+    background-repeat: no-repeat;
+    background-position: left 20% center;
+}
+
+.hero .details{
+    display: flex;
+    z-index: inherit;
+    flex-direction: column;
+}
+.hero .details .heading{
+    display: flex;
+    color: #FFF;
+    font-weight: bold;
+    font-size: 60px;
+}
+.hero .details .heading span{
+    display: flex;
+    padding-left: 20px;
+    color: goldenrod;
+}
+.hero .details p{
+    color: #FFF;
+    margin: 10px 0px;
+    line-height: 30px;
+    font-size: 20px;
+}
+.hero .details p b{
+    color: gold;
+}
+.hero .details strong{
+    display: flex;
+    color: #f8ff2c;
+    font-size: 40px;
+    margin: 30px 0px;
+} 
+.hero .details #btn{
+    display: flex;
+    width: 200px;
+    height: 50px;
+    font-size: 20px;
+    font-weight: bold;
+    background: #FFF;
+    text-decoration: none;
+    color: #191919;
+    border-radius: 8px;
+    align-items: center;
+    justify-content: center;
+    transition: 0.5s;
+}
+    
+.hero .details #btn:hover{
+    background: transparent;
+    border: 2px solid #FFF;
+    color: #FFF;
+}
+.hero .img-cont{
+    display: flex;
+    right: 6%; top: 15%;
+    position: absolute;
+    height: 75%;
+    width: auto;
+    transition: 1s;
+}
+.hero .img-cont:hover{
+    transform: rotate(30deg);
+}
+.hero .img-cont img{
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+
+.hero .social-media{
+    display: inline-block;
+    position: absolute;
+    right: 30px;
+}
+.hero .social-media li{
+    display: block;
+    margin: 40px 0px;
+    list-style: none;
+}
+.hero .social-media li a{
+    display: flex;
+    padding: 10px;
+    background: #FFF;
+    border-radius: 5px;
+    text-decoration: none;
+}
+.hero .social-media li a ion-icon{
+    font-size: 25px;
+    color: #191919;
+}
+.hero .social-media li:nth-child(1):hover a ion-icon{
+    color: #04abe3;
+}
+.hero .social-media li:nth-child(2):hover a ion-icon{
+    color: #e30404;
+}
+.hero .social-media li:nth-child(3):hover a ion-icon{
+    color: #04abe3;
+}
+
+.hero .shoes{
+    display: flex;
+    bottom: 10%; left: 25%;
+    position: absolute;
+    width: auto;
+    height: auto;
+}
+.hero .shoes li{
+    display: flex;
+    width: 110px;
+    height: 140px;
+    transition: 0.5s;
+}
+.hero .shoes li:hover{
+    transform: translateY(-20px);
+}
+
+.hero .shoes li img{
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+
+
+
+
+
+
+/* mobile devices */
+
+@media (min-width: 320px) and (max-width: 480px){
+    .container{
+        width: 100%;
+        height: 100%;
+        overflow-y: scroll;
+    }
+    .container::before{
+        top: -120px; left: -80px;
+        width: 300px;
+        height: 300px;
+        overflow-y: scroll;
+    }
+    .container::after{
+        bottom: -300px; right: -200px;
+        width: 400px;
+        height: 400px;
+        overflow-y: scroll;
+    }
+    header #open{
+        display: flex;
+        width: 40px;
+        height: 40px;
+        outline: none;
+        border: none;
+        background: transparent;
+        border-radius: 6px;
+        align-items: center;
+        justify-content: center;
+        transition: 0.5s;
+    }
+    header #open:hover{
+        color: #191919;
+        background: #FFF;
+    }
+
+    header #open ion-icon{
+        display: flex;
+        font-size: 20px;
+        font-weight: bold;
+        color: #FFF;
+    }
+    header #open:hover ion-icon{
+        color: #191919;
+    }
+    header #cart{
+        margin: 0px 0px 0px 100px;
+    }
+
+    header .nav{
+        display: none;
+    }
+    header .nav.active{
+		display: flex;
+		top: 0; right: 0px;
+		flex-direction: column;
+		margin: 0px 0px 0px 0px;
+		position: absolute;
+		width: 100%;
+		height: 100vh;
+		background: #191919;
+		align-items: center;
+		justify-content: center;
+	}
+    header .nav.active .nav-item{
+        margin: 7px 0px;
+    }
+    header .nav #close{
+        display: flex;
+        width: 40px;
+        height: 40px;
+        border-radius: 6px;
+        margin: 0px 0px 40px 0px;
+        align-items: center;
+        justify-content: center;
+    }
+    header .nav #close ion-icon{
+        display: flex;
+        font-size: 20px;
+    }
+    .hero{
+        flex-direction: column-reverse;
+        padding: 45px 10px;
+        height: 100%;
+        align-items: center;
+        justify-content: space-between;
+    }
+    .hero::before{
+        background-size: 90% 20%;
+        background-position: top 40% center;
+    }
+    .hero .details{
+        position: relative;
+        width: 100%;
+        height: 50%;
+        padding: 30px;
+        align-items: center;
+        align-items: center;
+        justify-content: center;
+    }
+    .hero .details .heading{
+        font-size: 30px;
+        margin: 10px 0px 20px 0px;
+    }
+    .hero .details p{
+        font-size: 16px;
+    }
+    .hero .details strong{
+        display: flex;
+        margin: 20px 0px;
+    } 
+    .hero .img-cont{
+        right: 0%; top: 0%;
+        padding: 40px 0px 0px 0px;
+        position: relative;
+        height:  80vh;
+        width: 100%;
+        justify-content: center;
+    }
+    .hero .img-cont img{
+        display: flex;
+        position: absolute;
+        width:  auto;
+        height: 60%;
+    }
+    .hero .shoes{
+        top: 38%; left: 0%; 
+        width: calc(100% - 10%);
+        margin: 0px 5%;
+        height: 200px;
+        align-items: center;
+        justify-content: space-around;
+    }
+    .hero .shoes li{
+        position: relative;
+        width: auto;
+        height: calc(200px - 90px);
+    }
+    .hero .social-media{
+        display: inline;
+        position: absolute;
+        right: 10px;
+        bottom: 3%;
+        align-items: center;
+        justify-content: space-around;
+        z-index: inherit;
+        align-items: center;
+    }
+    .hero .social-media li{
+        display: block;
+        margin: 20px 0px;
+        list-style: none;
+    }
+}
